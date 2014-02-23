@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+		<meta charset="utf-8">
+		<title>Bootstrap 3.0 / jQuery 2.0 tree view with checkboxes</title>
+
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<style type="text/css">
+		
+		.tree, .tree ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.tree ul {
+	background-color: white;
+	margin-top: 4px;
+}
+			.list-group-item {
+				padding: 5px 15px;
+				padding-right: 0px;
+				border: none;
+			}			
+						
+			.tree label {
+				color: #555;
+			}
+			
+			.tree label:hover {
+				text-decoration: underline;
+			}
+			
+			.tree label.tree-parent {
+				color: #222;
+			}
+			
+			.tree label.tree-parent:hover {
+				text-decoration: none;
+			}
+			
+			
+			.tree .hitarea {
+				background: url(treeview-default.gif) 0 -111px no-repeat;
+				height: 16px;
+				width: 16px;
+				margin-left: 0px;
+				float:left;
+				cursor: pointer;
+			}
+			
+			.tree .expandable-hitarea { background-position: -80px -3px; }
+			
+			/* fix for IE6 */
+			* html .hitarea {
+				display: inline;
+				float:none;
+			}
+			.tree li { 
+					margin: 0;
+					padding: 3px 0pt 3px 16px;
+			}
+								
+			.tree .lastli { background-position: 0 -1766px }
+			
+			.tree span.folder { background: url(folder.gif) 0 0 no-repeat; 
+								padding: 1px 0 1px 16px; display: block;
+			}
+			
+			.tree li { background: url(treeview-default-line.gif) 0 0 no-repeat; }
+			
+		</style>
+	</head>
+		
+	<body>
+
+	<!-- Adapted partially from http://bootply.com/83798 (Steves_Boots) -->
+		<div class="well" style="margin-left:100px;">
+			<ul class="list-group tree">
+				<div class="hitarea"/><li class="list-group-item"><span class="folder"><label class="tree-toggle tree-parent">Namespace</label></span>
+					<ul class="list-group tree">
+						<div class="hitarea"/><li class="list-group-item"><span class="folder"><label class="tree-toggle tree-parent">Resource1</label></span>
+							<ul class="list-group tree">
+								<li class="list-group-item"><span class="folder"><label>Resource1Child1</label></span></li>
+								<li class="list-group-item"><span class="folder"><label>Resource1Child2</label></span></li>
+								<li class="list-group-item"><span class="folder"><label>Resource1Child3</label></span></li>
+															
+							</ul>
+						</li>
+						<li class="list-group-item"><span class="folder"><label>Resource2</label></span></li>
+						<div class="hitarea"/><li class="list-group-item"><span class="folder"><label class="tree-toggle tree-parent">Resource3</label></span>
+						
+							<ul class="list-group tree">
+								<li class="list-group-item"><span class="folder"><label>Resource3Child1</label></span></li>
+								<li class="list-group-item"><span class="folder"><label>Resource3Child2</label></span></li>								
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>		  
+		<script type='text/javascript' src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+		<script type='text/javascript' src="treeview.js"></script>
+		
+	</body>
+</html>
